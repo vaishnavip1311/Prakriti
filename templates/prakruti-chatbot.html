@@ -1,0 +1,50 @@
+ {% extends "base.html" %}
+
+{% load static %}
+{% block title %}Prakruti Chatbot {% endblock title %}
+{% block head %}
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" href="{% static 'css/prakruti.css' %}">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+{% endblock head %}
+{% block main %}
+<section class="home" id="home">
+    <div class="container">
+        {% if user.is_authenticated %}
+        <div class="user-intro"><b>Welcome, {{ user.username }}</b> <a href="/logout">Logout</a></div>
+        {% else %}
+        <div class="user-intro"><b>You are not logged in. <a href="/login">Login</a> or <a href="/register">Register</a></b></div>
+        {% endif %}
+        {% if error_message %}
+        <div id="error-message" class="error-message">
+            <p>{{ error_message }}</p>
+            <div id="cross-btn" class="cross-btn">
+                <i class='bx bx-x'></i>
+            </div>
+        </div>
+        {% endif %}
+        
+
+        <form method="POST">
+            {% csrf_token %}
+            <ul>
+                {% for question in questions %}
+                <li>
+                    <label>{{ question.question }}</label><br>
+                    <input type="checkbox" name="{{ question.id }}" value="yes"> Yes
+                    <input type="checkbox" name="{{ question.id }}" value="no"> No
+                </li>
+                {% endfor %}
+
+                
+            </ul>
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+</section>
+{% endblock main %}
+{% block script %}
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/prakruti.js' %}"></script>
+{% endblock script %}

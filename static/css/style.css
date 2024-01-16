@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.5px;
+}
+body {
+  box-sizing: border-box;
+}
+:root {
+  --color-primary: #ff993366;
+  --color-secondary: #8db600;
+  --mono: Montserrat, monospace;
+  --sans: Poppins, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+/* utilities */
+.font-ex-large {
+  font-size: 2.5rem;
+}
+.font-large {
+  font-size: 2rem;
+}
+.font-mid-medium {
+  font-size: 1.75rem;
+}
+.font-medium {
+  font-size: 1.5rem;
+}
+.font-small {
+  font-size: 1.25rem;
+}
+.font-normal {
+  font-size: 1.1rem;
+}
+.font-ex-small {
+  font-size: 0.75rem;
+}
+.btn {
+  color: white;
+  background-color: var(--color-secondary);
+  border-radius: 5px;
+  padding: 10px;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+.btn-border {
+  color: black;
+  border: 2px solid var(--color-secondary);
+  border-radius: 5px;
+  padding: 10px;
+  &:hover {
+    background-color: var(--color-secondary);
+    color: white;
+  }
+}
+/* navbar */
+#navbar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 60px;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin: 0 50px 0 0;
+}
+.nav-links a {
+  color: black;
+  text-decoration: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--color-secondary);
+}
+/* intro section */
+#intro {
+  display: flex;
+  margin: 50px 60px;
+  justify-content: space-around;
+}
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 330px;
+  gap: 10px;
+}
+.intro-img img {
+  height: 350px;
+  width: 472px;
+}
+.intro-heading {
+  color: var(--color-secondary);
+}
+/* about chatbot section */
+#about-chatbot {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 60px;
+  margin-top: 120px;
+
+}
+#about-chatbot img {
+  height: 370px;
+  width: 370px;
+}
+#about-chatbot div {
+  width: 400px;
+}
+.about-chatbot-heading {
+  margin: 20px 0;
+}
+/* aims section */
+#aims {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 5rem;
+}
+.aim-boxes {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.aim-boxes div {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 23vw;
+  padding: 20px 20px;
+  background-color: white;
+  border-radius: 15px;
+  text-align: center;
+  gap: 15px;
+  letter-spacing: 0.5px;
+  box-shadow: -1px 4px 10px 6px #c1c1c1;
+}
+.aim-heading {
+  display: flex;
+  align-items: center;
+}
+/* footer */
+footer {
+  background: url('../img/footer-bg.png') no-repeat center;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 120px 0;
+  gap: 10px;
+}
+.footer-items {
+  display: flex;
+  gap: 13vw;
+}
+.footer-items div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.footer-items div p {
+  color: var(--color-secondary);
+  margin: 5px 0;
+}
+.footer-items a {
+  color: white;
+}
+.footer-heading {
+  margin: 30px 0;
+}
+.ad-link {
+  color: var(--color-secondary);
+}
+.solve-ease-tag {
+  text-align: center;
+  margin: 5px;
+}
+.white-line {
+  height: 2px;
+  width: 80vw;
+  background-color: white;
+  margin: 10px 0 0 0;
+}
+.bg-stickers {
+  position: absolute;
+}
+.bg-stickers img {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  opacity: 0.8;
+}
+.bg-stickers .bg-1 {
+  top: 340px;
+  left: 200px;
+}
+.bg-stickers .bg-2 {
+  top: 380px;
+  left: 1000px;
+}
+.bg-stickers .bg-3 {
+  top: 10px;
+  left: 500px;
+}
+.bg-stickers .bg-4 {
+  top: 800px;
+  left: 680px;
+}
+/*  about page */
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px;
+}
+.about h1 {
+  color: var(--color-secondary);
+}
+.about section {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  gap: 40px;
+}
+.who-we-are {
+  align-items: flex-end;
+}
+.why-we-exist {
+  align-items: flex-start;
+}
+/* about page philosophy */
+.philosophy {
+  align-items: center;
+}
+.philosophy div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+.philosophy div div {
+  max-width: 250px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--color-primary);
+}
+/* contact page */
+.contact-intro {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+  
+}

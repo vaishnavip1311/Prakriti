@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}{{username}} {% endblock title %}
+
+{% block head %}
+
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+{% endblock head %}
+
+
+{% block main %}
+
+<div class="pf-container">
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>User Profile</h1>
+    
+        </div>
+        <div class="profile-content">
+            <div class="profile-image">
+                <img src="{% static 'img/user-img.avif' %}" alt="User Profile Image">
+            </div>
+            <div class="profile-details">
+                <h2>{{ user.username }}</h2>
+                <p>Phenotype: {{ prakruti_result }}</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{% endblock main %}
+
+{% block script %}
+
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/profile.js' %}"></script>
+
+{% endblock script %}
